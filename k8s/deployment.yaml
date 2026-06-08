@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shadowxlab-deployment
+  namespace: shadowxlab
+  labels:
+    app: shadowxlab
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: shadowxlab
+  template:
+    metadata:
+      labels:
+        app: shadowxlab
+    spec:
+      containers:
+        - name: shadowxlab-container
+          image: <dockerhub-username>/shadowxlab-portal:v1
+          ports:
+            - containerPort: 5000
+          env:
+            - name: APP_VERSION
+              value: "v1.0"
+            - name: APP_ENV
+              value: "production"
