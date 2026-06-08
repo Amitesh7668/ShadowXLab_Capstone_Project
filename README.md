@@ -1,4 +1,4 @@
-# ShadowXLab Docker & Kubernetes Capstone Project - Basic Mandatory Submission
+# ShadowXLab Docker & Kubernetes Capstone Project
 
 ## Project Overview
 ShadowXLab Cyber Learning Portal is a cloud-native web application containerized using Docker and deployed on Kubernetes.
